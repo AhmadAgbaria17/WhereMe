@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AdminSidebar from "./AdminSidebar";
 import "./admin-table.css";
 import { Link } from "react-router-dom";
-import swal from "sweetalert"
+import swal from "sweetalert";
+import {useDispatch,useSelector} from "react-redux";
+import { deleteProfile, getAllUsersProfile } from "../../redux/apiCalls/profileApiCall";
 
 
 const UsersTable = () => {
+  const dispatch = useDispatch();
+  const {profiles,isProfileDeleted} = useSelector(state => state.profile);
+
+
+  useEffect( ()=>{
+    dispatch(getAllUsersProfile());
+  
+  },[dispatch,isProfileDeleted]);
+
+
+
 
   // Delete User handler 
-  const deleteUserHandler = ()=>{
+  const deleteUserHandler = (userId)=>{
     swal({
       title: "Are you sure?",
       text: "Once deleted, you will not be able to recover this user!",
@@ -18,12 +31,10 @@ const UsersTable = () => {
     })
     .then((willDelete) => {
       if (willDelete) {
-        swal("User has been deleted!", {
-          icon: "success",
-        });
-      } else {
-        swal("Something went wrong");
-      }
+        dispatch(deleteProfile(userId))
+      
+
+      } 
     });
   }
 
@@ -42,34 +53,34 @@ const UsersTable = () => {
             </tr>
           </thead>
           <tbody>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-              <tr key={item}>
+            {profiles.map((profile , index) => (
+              <tr key={profile._id}>
 
-                <td>{item}</td>
+                <td>{index+1}</td>
 
                 <td>
                   <div className="table-image">
-                    <img src="/images/user-avatar.png" 
+                    <img src={profile.profilePhoto?.url}
                     alt=""
                     className="table-user-image" />
                     <span className="table-username">
-                      Ahmad Agbaria
+                      {profile.username}
                     </span>
                   </div>
                 </td>
 
                 <td>
-                  Ahmad@gmail.com
+                  {profile.email}
                 </td>
 
                 <td>
                   <div className="table-button-group">
                     <button>
-                      <Link to="/profile/1">
+                      <Link to={`/profile/${profile._id}`}>
                         View Profile
                       </Link>
                     </button>
-                    <button onClick={deleteUserHandler}>
+                    <button onClick={()=>deleteUserHandler(profile._id)}>
                       Delete User
                     </button>
                   </div>

@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import "./form.css"
 import { toast } from "react-toastify";
+import {useDispatch, useSelector} from "react-redux"
+import { registerUser } from "../../redux/apiCalls/authApiCall";
+import swal from "sweetalert";
 
 const Register = () => {
+  const dispatch = useDispatch();
+  const {registerMessage} = useSelector(state=>state.auth)
 
   const [username,setUsername]= useState("")
   const [email,setEmail]= useState("")
@@ -20,7 +25,20 @@ const Register = () => {
     if(password.trim()==="") return toast.error("Password is required");
 
     console.log({username,email,password})
+    dispatch(registerUser({username,email,password}))
     
+  }
+  const navigate = useNavigate();
+
+  if(registerMessage){
+    swal({
+      title: registerMessage,
+      icon:"success"
+    }).then(isOk=>{
+      if(isOk){
+        navigate("/login")
+      }
+    })
   }
 
 

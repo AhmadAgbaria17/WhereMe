@@ -1,6 +1,7 @@
 const express = require("express");
 const connectToDb = require("./config/connectToDb");
 const { errorHandler, notFound } = require("./middlewares/error");
+const cors = require("cors");
 require("dotenv").config();
 
 
@@ -15,6 +16,13 @@ const app = express();
 
 //middlewares
 app.use(express.json()); //to parse the incoming requests with JSON payloads
+
+
+//Cors Policy
+app.use(cors({
+  origin:"http://localhost:3000"
+}));
+
 
 
 //Routes

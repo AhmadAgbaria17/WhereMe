@@ -38,9 +38,8 @@ module.exports.createCategoryCtrl= asyncHandler(async(req,res)=>{
  */
 
 module.exports.getAllCategoriesCtrl= asyncHandler(async(req,res)=>{
-  
-  const categories = await Category.find();
-  res.status(200).json(categories)
+  const data = await Category.find();
+  res.status(200).json(data)
 
 })
 

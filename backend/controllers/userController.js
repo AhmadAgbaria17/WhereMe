@@ -63,7 +63,8 @@ module.exports.updateUserProfileCtrl = asyncHandler(async(req,res)=>{
         password: req.body.password,
         bio: req.body.bio
       }
-    },{new : true}).select("-password");
+    },{new : true}).select("-password")
+    .populate("posts")
 
     res.status(200).json(updatedUser);
 });
@@ -84,7 +85,7 @@ module.exports.getUsersCountCtrl = asyncHandler(async (req, res) => {
 
 /**
  * @desc Profile photo upload
- * @route /api/users/profile/profile-photo-upload
+ * @route /api/users/proflie/profile-photo-upload
  * @method POST
  * @access private (only logged in user)
  */
@@ -102,7 +103,7 @@ module.exports.profilePhotoUploadCtrl = asyncHandler(async(req,res)=>{
   //4. Get the user from DB
   const user = await User.findById(req.user.id)
   //5. Delete the old profile photo if exist 
-  if(user.profilePhoto.publicID!== null){
+  if(user.profilePhoto.publicID !== undefined){
     await cloudinaryRemoveImage(user.profilePhoto.publicID)
   }
   //6. change the profilePhoto field in the DB
@@ -147,7 +148,9 @@ module.exports.deleteUserProfileCtrl = asyncHandler(async(req,res)=>{
       await cloudinaryRemoveMulitipleImage(publicIds)
     }
     //5. delete the profile picture from the cloudinary
-    await cloudinaryRemoveImage(user.profilePhoto.publicID);
+    if(user.profilePhoto.publicID !== undefined){
+      await cloudinaryRemoveImage(user.profilePhoto.publicID);
+    }
 
     //6. delete user posts and comments
     await Post.deleteMany({user: user._id}).catch(err=>console.log(err));

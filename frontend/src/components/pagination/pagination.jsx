@@ -1,16 +1,36 @@
 import React from 'react';
 import "./pagination.css"
 
-const Pagination = () => {
+const Pagination = ({pages , currentPage , setCurrentPage}) => {
+  const generatedPages= [];
+
+  for(let i=1 ; i<=pages;i++){
+    generatedPages.push(i);
+  }
+
+
   return (
     <div className='pagination'>
-      <div className="page previous">Previous</div>
-      {[1,2,3,4,5].map(page => (
-        <div key={page} className='page'>
+      <button 
+      onClick={()=>{setCurrentPage(currentPage => currentPage-1)}}
+      disabled={currentPage===1 ? true : false}
+      className="page previous">
+        Previous
+        </button>
+      {generatedPages.map(page => (
+        <div 
+        onClick={()=>setCurrentPage(page)} 
+        key={page} 
+        className={currentPage===page ? "page active": "page"}>
             {page}
         </div>
       ))}
-      <div className="page next">Next</div>
+      <button 
+      onClick={()=>{setCurrentPage(currentPage => currentPage+1)}}
+      disabled={currentPage===pages ? true : false}
+      className="page next">
+        Next
+      </button>
       
     </div>
   );

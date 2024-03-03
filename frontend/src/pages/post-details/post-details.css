@@ -99,6 +99,18 @@
   cursor: pointer;
 }
 
+.login-to-comment{
+  font-size: 17px;
+  color: var(--gray-color);
+  
+}
+
+.login-comment-to{
+  color: var(--green-color);
+  margin-left: 5px;
+
+}
+
 
 
 /* Media Queries */

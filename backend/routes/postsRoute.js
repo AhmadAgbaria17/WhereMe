@@ -24,7 +24,7 @@ router.route("/:id")
 
 
 // /api/posts/update-image/:id
-router.route("/update-image/:id")
+router.route("/upload-image/:id")
       .put(validateObjectId,verifyToken,photoUpload.single("image"),updatePostImageCtrl)
 
 

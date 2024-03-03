@@ -95,7 +95,7 @@ module.exports.getAllPostsCtrl = asyncHandler(async (req, res) => {
 module.exports.getSinglePostsCtrl = asyncHandler(async (req, res) => {
   const post = await Post.findById(req.params.id)
     .populate("user", "-password")
-    .populate("commetns");
+    .populate("comments");
 
   if (!post) {
     return res.status(404).json({ message: "No post found" });
@@ -129,13 +129,13 @@ module.exports.deletePostsCtrl = asyncHandler(async (req, res) => {
 
   if (req.user.isAdmin || req.user.id === post.user.toString()) {
     await Post.findByIdAndDelete(req.params.id);
-    await cloudinaryRemoveImage(post.image.pubicId);
+    await cloudinaryRemoveImage(post.image.public_id);
 
     await Comment.deleteMany({postID : post._id })
 
     res
       .status(200)
-      .json({ message: "Post has been deleted successflly", postID: post._id });
+      .json({ message: "Post has been deleted successflly", postId: post._id });
   } else {
     res.status(403).json({ message: "access denied, forbidden " });
   }

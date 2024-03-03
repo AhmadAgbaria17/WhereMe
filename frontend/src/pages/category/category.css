@@ -11,3 +11,19 @@
   font-size: 30px;
   width: max-content;
 }
+
+.category-not-found{
+  font-size: 30px;
+  margin: 20px 0;
+  color: var(--dark-color);
+}
+
+.category-not-found span{
+  color: var(--red-color);
+}
+
+.category-not-found-link{
+  font-size: 21px;
+  text-decoration: underline;
+  font-weight: 500;
+}
