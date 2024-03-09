@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , NavLink } from 'react-router-dom';
 
 const AdminSidebar = () => {
   return (
@@ -9,25 +9,25 @@ const AdminSidebar = () => {
         Dashboard
       </Link>
       <ul className="admin-dashboard-list">
-        <Link className='admin-sidebar-link' to="/admin-dashboard/users-table">
+        <NavLink className='admin-sidebar-link' to="/admin-dashboard/users-table">
           <i className="bi bi-person"></i>
           Users
-        </Link>
+        </NavLink>
 
-        <Link className='admin-sidebar-link' to="/admin-dashboard/posts-table">
+        <NavLink className='admin-sidebar-link' to="/admin-dashboard/posts-table">
           <i className="bi bi-file-post"></i>
           Posts
-        </Link>
+        </NavLink>
 
-        <Link className='admin-sidebar-link' to="/admin-dashboard/categories-table">
+        <NavLink className='admin-sidebar-link' to="/admin-dashboard/categories-table">
           <i className="bi bi-tag-fill"></i>
           Categories
-        </Link>
+        </NavLink>
 
-        <Link className='admin-sidebar-link' to="/admin-dashboard/comments-table">
+        <NavLink className='admin-sidebar-link' to="/admin-dashboard/comments-table">
           <i className="bi bi-chat-left-text"></i>
           Comments
-        </Link>
+        </NavLink>
 
       </ul>
     </div>

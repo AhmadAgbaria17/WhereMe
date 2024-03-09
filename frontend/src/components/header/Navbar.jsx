@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Navbar = ({ toggle, setToggle }) => {
@@ -20,6 +20,7 @@ const Navbar = ({ toggle, setToggle }) => {
         >
           <i className="bi bi-house"></i>Home
         </Link>
+
         <Link
           className="nav-link"
           to="/posts"

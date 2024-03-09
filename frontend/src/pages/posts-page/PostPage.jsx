@@ -28,7 +28,7 @@ const PostPage = () => {
 
 
   return (
-    <>
+    <div className="main-post-page">
       <section className="posts-page">
         <PostList posts={posts} />
         <Sidebar />
@@ -38,7 +38,7 @@ const PostPage = () => {
        currentPage={currentPage}
        setCurrentPage={setCurrentPage}
        />
-    </>
+    </div>
   );
 };
 

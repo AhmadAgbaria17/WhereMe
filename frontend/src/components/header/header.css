@@ -47,6 +47,10 @@
   align-items: center;
 }
 
+.active{
+  background-color: blue;
+}
+
 .nav-link{
   margin: 0 12px;
   cursor: pointer;
@@ -54,6 +58,8 @@
   font-weight: 500;
   color: var(--white-color);
 }
+
+
 
 .nav-link:hover{
   color: var(--main-color);

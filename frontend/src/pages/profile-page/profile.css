@@ -3,7 +3,7 @@
 }
 
 .profile-loader{
-  min-height: calc(100vh-130px);
+  min-height: calc(100vh - 130px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -133,6 +133,12 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
+  transition: 1000ms;
+}
+
+.delete-account-btn:hover {
+  background-color: var(--red-color);
+  color: var(--white-color);
 }
 
 
