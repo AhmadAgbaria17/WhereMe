@@ -27,7 +27,7 @@ export function logoutUser(){
 
 //Register User
 export function registerUser(user){
-  return async (dispatch, getState) =>{
+  return async (dispatch) =>{
     try {
       const {data} = await request.post("/api/auth/register",user)
       dispatch(authActions.register(data.message));

@@ -9,6 +9,7 @@ const helmet = require("helmet");
 const hpp = require("hpp");
 
 
+
 //connection to Db
 connectToDb();
 
@@ -50,6 +51,7 @@ app.use("/api/posts", require("./routes/postsRoute"));
 app.use("/api/comments", require("./routes/commentsRoute"));
 app.use("/api/categories", require("./routes/categoriesRoute"));
 app.use("/api/password", require("./routes/passwordRoute"));
+app.use("/api/places", require("./routes/placeRoute"))
 
 
 // Error Handler Middlewate

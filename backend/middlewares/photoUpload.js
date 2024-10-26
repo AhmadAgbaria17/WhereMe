@@ -22,6 +22,7 @@ const photoStorage = multer.diskStorage({
 
 //photo Upload Middleware
 const photoUpload=multer({
+
   storage: photoStorage,
   fileFilter: function(req,file, cb){
     if(file.mimetype.startsWith("image")){

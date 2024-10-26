@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8f20cd2-2d33-4fdc-ba6c-edc1b032bc02" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/controllers/postController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/controllers/postController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-01-19T16-15-26.230ZWhatsApp Image 2023-03-24 at 16.52.11.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T16-50-33.373ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T16-50-48.654ZWhatsApp Image 2023-03-24 at 00.25.59.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T16-51-03.435ZWhatsApp Image 2023-03-24 at 00.25.59.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-02-58.159ZWhatsApp Image 2023-03-24 at 00.25.59.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-03-29.748ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-03-40.764ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-06-02.477ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-06-33.442ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-07-23.809ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-07-56.783ZWhatsApp Image 2023-03-24 at 00.32.21.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-08-18.271ZWhatsApp Image 2023-03-24 at 00.32.21.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-08-28.769ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-14-20.538ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-14-36.505ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-15-25.347ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-15-35.376ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-16-47.051ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-17-30.336ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-18-09.147ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-18-19.607ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-29-27.272ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-32-30.759ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-42-14.801ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-43-20.364ZWhatsApp Image 2023-03-24 at 00.33.55.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-47-31.901ZWhatsApp Image 2023-03-24 at 00.33.55.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-48-45.373ZWhatsApp Image 2023-03-24 at 00.33.55.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-49-51.730ZWhatsApp Image 2023-03-24 at 00.33.55.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-58-42.793ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-59-12.817ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T17-59-34.214ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-22T18-00-02.541ZWhatsApp Image 2023-03-24 at 00.27.26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-02-25T04-46-09.581ZWhatsApp Image 2023-03-24 at 00.33.55.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/images/2024-03-01T13-01-53.431ZWhatsApp Image 2023-03-24 at 16.52.11.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/middlewares/photoUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/middlewares/photoUpload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/models/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/routes/postsRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/routes/postsRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderLeft.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderLeft.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/PostItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/PostItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/postList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/postList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/posts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/posts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dummyData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/create-post/CreatePost.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/create-post/CreatePost.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/create-post/create-post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/create-post/create-post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/forms/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/forms/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/forms/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/forms/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/post-details/PostDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/post-details/PostDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/apiCalls/authApiCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/apiCalls/authApiCall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/apiCalls/postApiCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/apiCalls/postApiCall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/postSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/postSlice.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2nU7XQPVJlbG7aXjJ7aycx9Myki" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8f20cd2-2d33-4fdc-ba6c-edc1b032bc02" name="Changes" comment="" />
+      <created>1729015840854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729015840854</updated>
+    </task>
+    <servers />
+  </component>
+</project>

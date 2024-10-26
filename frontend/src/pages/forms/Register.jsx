@@ -19,12 +19,12 @@ const Register = () => {
 
   const formSubmitHandler = (e)=>{
     e.preventDefault();
+    
 
     if(username.trim()==="") return toast.error("Username is required");
     if(email.trim()==="") return toast.error("Email is required");
     if(password.trim()==="") return toast.error("Password is required");
 
-    console.log({username,email,password})
     dispatch(registerUser({username,email,password}))
     
   }

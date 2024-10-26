@@ -21,28 +21,36 @@ const { Comment } = require("../models/Comment");
 
 module.exports.createPostCtrl = asyncHandler(async (req, res) => {
   //1. validation for image
-  if (!req.file) {
-    return res.status(400).json({ message: "no image provided" });
+  if (!req.files || req.files.length === 0) {
+    return res.status(400).json({ message: "no images provided" });
   }
   //2.validation for data
-  const { error } = validateCreatePost(req.body);
-  if (error) {
-    return res.status(400).json({ message: error.details[0].message });
-  }
+  // const { error } = validateCreatePost(req.body);
+  // if (error) {
+  //   return res.status(400).json({ message: error.details[0].message });
+  // }
   //3. upload photo
-  const imagePath = path.join(__dirname, `../images/${req.file.filename}`);
-  const result = await cloudinaryUploadImage(imagePath);
+
+  const imageUploadPromises = req.files.map(async(file)=>{
+    const imagePath = path.join(__dirname,`../images/${file.filename}`);
+    const result = await cloudinaryUploadImage(imagePath);
+    fs.unlinkSync(imagePath);
+    return{
+      url:result.secure_url,
+      public_id:result.public_id
+    }
+  })
+
+  const images= await Promise.all(imageUploadPromises);
 
   //4. create a new post and save it to DB
   const post = await Post.create({
     title: req.body.title,
     description: req.body.description,
     category: req.body.category,
+    location:req.body.location,
     user: req.user.id,
-    image: {
-      url: result.secure_url,
-      public_id: result.public_id,
-    },
+    images,
   });
 
   //5. send response to the client
@@ -62,7 +70,7 @@ module.exports.createPostCtrl = asyncHandler(async (req, res) => {
  */
 
 module.exports.getAllPostsCtrl = asyncHandler(async (req, res) => {
-  const POST_PER_PAGE = 3;
+  const POST_PER_PAGE = 6;
   const { pageNumber, category } = req.query;
   let posts;
 

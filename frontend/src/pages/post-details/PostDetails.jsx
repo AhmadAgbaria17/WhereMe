@@ -58,11 +58,11 @@ const PostDetails = () => {
   return (
     <section className="post-details">
       <div className="post-details-image-wrapper">
-        <img
+        {/* <img
           src={file ? URL.createObjectURL(file) : post?.image.url}
           alt=""
           className="post-details-image"
-        />
+        /> */}
         {user?._id === post?.user?._id && (
           <form
             onSubmit={updateImageSubmitHandler}

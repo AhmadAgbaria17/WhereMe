@@ -27,7 +27,7 @@ module.exports.registerUserCtrl = asyncHandler(async (req, res) => {
   if (user) {
     return res.status(400).json({ message: "Email is already registered" });
   }
-
+   
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(req.body.password, salt);
 

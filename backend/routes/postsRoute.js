@@ -7,7 +7,7 @@ const validateObjectId= require("../middlewares/validateObjectId")
 
 // /api/posts
 router.route("/")
-  .post(verifyToken,photoUpload.single("image"), createPostCtrl)
+  .post(verifyToken,photoUpload.array("images", 6), createPostCtrl)
   .get(getAllPostsCtrl);
 
 

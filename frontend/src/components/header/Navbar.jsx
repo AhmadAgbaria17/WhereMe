@@ -21,15 +21,7 @@ const Navbar = ({ toggle, setToggle }) => {
           <i className="bi bi-house"></i>Home
         </Link>
 
-        <Link
-          className="nav-link"
-          to="/posts"
-          onClick={() => {
-            setToggle(false);
-          }}
-        >
-          <i className="bi bi-stickies"></i>Posts
-        </Link>
+    
         {user && (
           <Link
             className="nav-link"

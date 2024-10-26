@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/header/Header";
-import Home from "./pages/home/Home";
 import Login from "./pages/forms/Login";
 import Register from "./pages/forms/Register";
 import PostPage from "./pages/posts-page/PostPage";
@@ -29,7 +28,7 @@ function App() {
       <ToastContainer theme="colored" position="top-center" />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<PostPage />} />
         <Route
           path="/login"
           element={!user ? <Login /> : <Navigate to="/" />}
@@ -50,7 +49,6 @@ function App() {
         <Route path="/profile/:id" element={<Profile />} />
 
         <Route path="posts">
-          <Route index element={<PostPage />} />
           <Route
             path="create-post"
             element={user ? <CratePost /> : <Navigate to="/" />}

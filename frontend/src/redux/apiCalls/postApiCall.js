@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 //Fetch Posts based On Page Number
 export function fetchPosts(pageNumber) {
-  return async (dispatch, getState) => {
+  return async (dispatch) => {
     try {
       const { data } = await request.get(`/api/posts?pageNumber=${pageNumber}`);
       dispatch(postActions.setPosts(data));
@@ -147,7 +147,7 @@ export function deletePost(postId) {
 
 //GetAllPosts
 export function getAllPosts() {
-  return async (dispatch, getState) => {
+  return async (dispatch) => {
     try {
       const { data } = await request.get(`/api/posts`);
       dispatch(postActions.setPosts(data));
@@ -156,3 +156,15 @@ export function getAllPosts() {
     }
   };
 }
+
+export function getPlaces(selectedPlace){
+  return async (dispatch) => {
+    try {
+      const {data}= await request.get(`/api/places/${selectedPlace}`)
+      dispatch(postActions.setLocations(data))
+    } catch (error) {
+      toast.error(error.response.data.message);
+    }
+  }
+}
+

@@ -28,13 +28,16 @@ const PostSchema= new mongoose.Schema({
       type:String ,
       required:true,
     },
-    image:{
-      type:Object,
-      default:{
-        url:"",
-        public_id:null
-      }
+    location: {
+      type: String, // Assuming location is sent as a stringified object
+      required: true,
     },
+    images: [
+      {
+        url: { type: String, required: true }, // Cloudinary image URL
+        public_id: { type: String, required: true }, // Cloudinary public ID
+      }
+    ],
     likes:[
       {
         type : mongoose.Schema.Types.ObjectId,
@@ -64,6 +67,8 @@ function validateCreatePost(obj){
     title:Joi.string().trim().min(2).max(200).required(),
     description:Joi.string().trim().min(10).required(),
     category:Joi.string().trim().required(),
+    location: Joi.string().required(), // Assuming location is a stringified object
+    
   })
   return schema.validate(obj);
 }
@@ -74,6 +79,7 @@ function validateUpdatePost(obj){
     title:Joi.string().trim().min(2).max(200),
     description:Joi.string().trim().min(10),
     category:Joi.string().trim(),
+    location: Joi.string(), // Assuming location is a stringified object
   })
   return schema.validate(obj);
 }

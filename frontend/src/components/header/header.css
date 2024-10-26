@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--blue-color);
+  background-color:  #263043;
   position: relative;
   z-index: 99;
   border-bottom: 2px solid var(--white-color);
