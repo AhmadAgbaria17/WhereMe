@@ -31,24 +31,24 @@ module.exports.createPostCtrl = asyncHandler(async (req, res) => {
   // }
   //3. upload photo
 
-  const imageUploadPromises = req.files.map(async(file)=>{
-    const imagePath = path.join(__dirname,`../images/${file.filename}`);
+  const imageUploadPromises = req.files.map(async (file) => {
+    const imagePath = path.join(__dirname, `../images/${file.filename}`);
     const result = await cloudinaryUploadImage(imagePath);
     fs.unlinkSync(imagePath);
-    return{
-      url:result.secure_url,
-      public_id:result.public_id
-    }
-  })
+    return {
+      url: result.secure_url,
+      public_id: result.public_id,
+    };
+  });
 
-  const images= await Promise.all(imageUploadPromises);
+  const images = await Promise.all(imageUploadPromises);
 
   //4. create a new post and save it to DB
   const post = await Post.create({
     title: req.body.title,
     description: req.body.description,
     category: req.body.category,
-    location:req.body.location,
+    location: req.body.location,
     user: req.user.id,
     images,
   });
@@ -70,7 +70,7 @@ module.exports.createPostCtrl = asyncHandler(async (req, res) => {
  */
 
 module.exports.getAllPostsCtrl = asyncHandler(async (req, res) => {
-  const POST_PER_PAGE = 6;
+  const POST_PER_PAGE = 3;
   const { pageNumber, category } = req.query;
   let posts;
 
@@ -81,9 +81,16 @@ module.exports.getAllPostsCtrl = asyncHandler(async (req, res) => {
       .sort({ createdAt: -1 })
       .populate("user", "-password");
   } else if (category) {
-    posts = await Post.find({ category })
+    posts = await Post.find()
       .sort({ createdAt: -1 })
       .populate("user", "-password");
+
+    if (posts.length > 0) {
+      const matchingPosts = posts.filter((post) =>
+        JSON.parse(post.category).some((cat) => cat.title === category)
+      );
+      posts = matchingPosts;
+    }
   } else {
     posts = await Post.find()
       .sort({ createdAt: -1 })
@@ -139,7 +146,7 @@ module.exports.deletePostsCtrl = asyncHandler(async (req, res) => {
     await Post.findByIdAndDelete(req.params.id);
     await cloudinaryRemoveImage(post.image.public_id);
 
-    await Comment.deleteMany({postID : post._id })
+    await Comment.deleteMany({ postID: post._id });
 
     res
       .status(200)

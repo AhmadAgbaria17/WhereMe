@@ -22,7 +22,8 @@
     "joi": "^17.11.0",
     "joi-password-complexity": "^5.2.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.3",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.2",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.11",
     "xss-clean": "^0.1.4"

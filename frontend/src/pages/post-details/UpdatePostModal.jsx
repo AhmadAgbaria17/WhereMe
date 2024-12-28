@@ -22,12 +22,11 @@ const UpdatePostModal = ({post,setUpdatePost}) => {
     
     e.preventDefault();
     if(title.trim()==="") return toast.error("Post Title is required")
-    if(category.trim()==="") return toast.error("Post Category is required")
     if(description.trim()==="") return toast.error("Post Description is required")
 
 
 
-    dispatch(updatePost({title,category,description}, post?._id));
+    dispatch(updatePost({title,description}, post?._id));
     setUpdatePost(false);
 
   }
@@ -51,22 +50,7 @@ const UpdatePostModal = ({post,setUpdatePost}) => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         />
-        <select
-        className='update-post-input'
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        >
-          <option disabled value="">
-            Select A category
-          </option>
-          {
-            categories.map(category=> (
-            <option key={category._id} value= {category.title}>
-              {category.title}
-              </option>)
-            )
-          }
-        </select>
+        
         <textarea
          className='update-post-textarea'
           rows="5"

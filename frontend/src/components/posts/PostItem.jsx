@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import "./posts.css";
 import ImageContainer from "./ImageContainer";
 
-const PostItem = ({ post, username, userId }) => {
+const PostItem = ({ post, username, userId,profilePhoto }) => {
   const profileLink = userId
     ? `/profile/${userId}`
     : `/profile/${post?.user._id}`;
 
   const [currentImg, setCurrentImg] = useState(0);
+  
 
   const handleNextImage = () => {
     setCurrentImg((curr) => (curr < post.images.length - 1 ? curr + 1 : curr));
@@ -30,7 +31,7 @@ const PostItem = ({ post, username, userId }) => {
               </div>
               <img
                 className="post-user-profile-photo"
-                src={post?.user.profilePhoto.url}
+                src={profilePhoto? profilePhoto.url : post?.user.profilePhoto.url}
                 alt="user profile ph"
               />
             </Link>

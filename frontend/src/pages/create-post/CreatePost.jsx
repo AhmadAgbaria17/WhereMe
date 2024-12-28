@@ -35,6 +35,7 @@ const CreatePost = () => {
     if (category.length===0) return toast.error("Post Category is required");
     if(!location || !location.description) return toast.error("Post location is required")
 
+    
 
     const formData = new FormData();
     

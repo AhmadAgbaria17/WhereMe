@@ -6,8 +6,10 @@ import { toast } from "react-toastify";
 export function fetchPosts(pageNumber) {
   return async (dispatch) => {
     try {
+      dispatch(postActions.setLoading());
       const { data } = await request.get(`/api/posts?pageNumber=${pageNumber}`);
       dispatch(postActions.setPosts(data));
+      dispatch(postActions.clearLoading());
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -31,8 +33,10 @@ export function GetPostsCount() {
 export function fetchPostsBasedOnCategory(category) {
   return async (dispatch, getState) => {
     try {
+      dispatch(postActions.setLoading());
       const { data } = await request.get(`/api/posts?category=${category}`);
       dispatch(postActions.setPostsCate(data));
+      dispatch(postActions.clearLoading());
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -66,8 +70,10 @@ export function createPost(newPost) {
 export function fetchSinglePost(postId) {
   return async (dispatch) => {
     try {
+      dispatch(postActions.setLoading());
       const { data } = await request.get(`/api/posts/${postId}`);
       dispatch(postActions.setPost(data));
+      dispatch(postActions.clearLoading());
     } catch (error) {
       toast.error(error.response.data.message);
     }

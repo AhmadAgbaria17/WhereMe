@@ -141,6 +141,7 @@ const Profile = () => {
             post={post}
             username={profile?.username}
             userId={profile?._id}
+            profilePhoto={profile?.profilePhoto}
           />
         ))}
       </div>

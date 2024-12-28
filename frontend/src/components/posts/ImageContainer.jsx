@@ -6,7 +6,7 @@ const ImageContainer = ({images,currentImg,setCurrentImg,onNext,onPrev}) => {
       <div className='image-container' >
         
         {currentImg===0?"":(
-          <i onClick={onPrev} class="bi bi-arrow-left arrow"></i>
+          <i onClick={onPrev} className="bi bi-arrow-left arrow"></i>
         )}
         <img
         className='post-item-image' 
@@ -14,7 +14,7 @@ const ImageContainer = ({images,currentImg,setCurrentImg,onNext,onPrev}) => {
         alt=''
         />
         {currentImg===images.length-1?"":(
-          <i onClick={onNext} class="bi bi-arrow-right arrow"></i>
+          <i onClick={onNext} className="bi bi-arrow-right arrow"></i>
         )}
       
         
